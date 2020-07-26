@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx, Styled, Flex, Box } from "theme-ui"
+import { Styled, Flex, Box } from "theme-ui"
 
 import { NextPage } from "next"
 

@@ -27,6 +27,8 @@
     ]
   },
   "dependencies": {
+    "@babel/plugin-transform-react-jsx": "7.10.4",
+    "@emotion/babel-plugin-jsx-pragmatic": "0.1.5",
     "@mdx-js/loader": "1.6.14",
     "@next/mdx": "9.4.4",
     "@prisma/cli": "2.3.0",
