@@ -11,6 +11,7 @@ const About: NextPage = () => (
         p: 3,
       }}
     >
+      {/* eslint-disable-next-line react/jsx-pascal-case */}
       <Styled.h1>Hello</Styled.h1>
     </Box>
   </Flex>
