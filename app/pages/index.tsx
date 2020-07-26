@@ -1,6 +1,6 @@
 import { Head, Link } from "blitz"
 
-const Home = () => (
+const Index = () => (
   <div className="container">
     <Head>
       <title>roses</title>
@@ -194,4 +194,4 @@ const Home = () => (
   </div>
 )
 
-export default Home
+export default Index
