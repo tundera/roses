@@ -1,3 +1,3 @@
-import baseTheme from "./baseTheme"
+import baseTheme from "./base"
 
 export default baseTheme

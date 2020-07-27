@@ -1,4 +1,4 @@
-const theme = {
+const base = {
   initialColorModeName: "light",
   useColorSchemeMediaQuery: true,
   colors: {
@@ -75,4 +75,4 @@ const theme = {
   },
 }
 
-export default theme
+export default base

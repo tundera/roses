@@ -37,7 +37,7 @@ const Index = () => (
         </a>
         <a
           className="button-outline"
-          href="https://github.com/blitz-js/blitz"
+          href="https://github.com/tundera/roses"
           target="_blank"
           rel="noopener noreferrer"
         >
