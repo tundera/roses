@@ -6394,13 +6394,6 @@ next-compose-plugins@2.2.0:
   resolved "https://registry.npmjs.org/next-compose-plugins/-/next-compose-plugins-2.2.0.tgz#95cd8eb40ab0652070d76572fb648354191628b0"
   integrity sha512-ChUlpT9tWfJ7YxqGw/WQ2T1gf8EeX93n1XqeQw0lkvGa7seszahvF4eOZUJoq7Hetsbzg4UHVnPoCXfXTyQR3g==
 
-next-nprogress-emotion@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/next-nprogress-emotion/-/next-nprogress-emotion-1.0.1.tgz#ceff405cfd7ab29b0a4de99bc9a7f1eceb5c873a"
-  integrity sha512-0DtAaIpW9QpZLd7fkv2EEnNCMgyFaxFVEjXc9sGORtyaaaB+iZFu53WubLxnVEV9Th+Hh/OUfaSNy2O2keIeNQ==
-  dependencies:
-    nprogress "^0.2.0"
-
 next-tick@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
@@ -6601,11 +6594,6 @@ npm-run-path@^4.0.0:
   integrity sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==
   dependencies:
     path-key "^3.0.0"
-
-nprogress@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
-  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^1.0.2:
   version "1.0.2"
