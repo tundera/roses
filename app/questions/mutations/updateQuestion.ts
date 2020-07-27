@@ -10,7 +10,7 @@ export default async function updateQuestion(
   ctx: Record<any, any> = {}
 ) {
   // Don't allow updating
-  delete data.id
+  //   delete data.id
 
   const question = await db.question.update({ where, data })
 

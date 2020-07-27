@@ -46,6 +46,7 @@ export const Question = () => {
     </div>
   )
 }
+
 const ShowQuestionPage: BlitzPage = () => {
   return (
     <div>
@@ -66,4 +67,5 @@ const ShowQuestionPage: BlitzPage = () => {
     </div>
   )
 }
+
 export default ShowQuestionPage
