@@ -4,7 +4,6 @@ import getQuestions from "app/questions/queries/getQuestions"
 
 export const QuestionsList = () => {
   const [questions] = useQuery(getQuestions, { orderBy: { id: "desc" } })
-
   return (
     <ul>
       {questions.map((question) => (

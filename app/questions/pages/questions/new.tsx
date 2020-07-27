@@ -1,5 +1,5 @@
-import React from "react"
 import { Head, Link, useRouter, BlitzPage } from "blitz"
+
 import createQuestion from "app/questions/mutations/createQuestion"
 import QuestionForm from "app/questions/components/QuestionForm"
 
@@ -12,16 +12,24 @@ const NewQuestionPage: BlitzPage = () => {
         <title>New Question</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <h1>Create New Question </h1>
 
         <QuestionForm
           initialValues={{}}
-          onSubmit={async () => {
+          onSubmit={async (event) => {
             try {
               const question = await createQuestion({
-                data: { text: "Do you love Blitz?", choices: { create: [{ text: "Yes!" }] } },
+                data: {
+                  text: event.target[0].value,
+                  choices: {
+                    create: [
+                      { text: event.target[1].value },
+                      { text: event.target[2].value },
+                      { text: event.target[3].value },
+                    ],
+                  },
+                },
               })
               alert("Success!" + JSON.stringify(question))
               router.push("/questions/[questionId]", `/questions/${question.id}`)
@@ -32,11 +40,9 @@ const NewQuestionPage: BlitzPage = () => {
         />
 
         <p>
-          {
-            <Link href="/questions">
-              <a>Questions</a>
-            </Link>
-          }
+          <Link href="/questions">
+            <a>Questions</a>
+          </Link>
         </p>
       </main>
     </div>
