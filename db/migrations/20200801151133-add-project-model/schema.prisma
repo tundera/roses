@@ -3,14 +3,14 @@
 
 // datasource sqlite {
 //     provider = "sqlite"
-//     url      = "file:./db.sqlite"
+//     url = "***"
 // }
 
 // SQLite is easy to start with, but if you use Postgres in production
 // you should also use it in development with the following:
 datasource postgresql {
     provider = "postgresql"
-    url      = env("DATABASE_URL")
+    url = "***"
 }
 
 generator client {
@@ -18,6 +18,11 @@ generator client {
 }
 
 // --------------------------------------
+
+model Project {
+ id        Int      @default(autoincrement()) @id
+ name      String
+}
 
 model Question {
     id        Int      @default(autoincrement()) @id
@@ -35,34 +40,4 @@ model Choice {
     votes      Int      @default(0)
     question   Question @relation(fields: [questionId], references: [id])
     questionId Int
-}
-
-model Project {
-  id        Int      @default(autoincrement()) @id
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  name      String   
-}
-
-model Player {
-  id        Int      @default(autoincrement()) @id
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  name      String   
-  number    Int      
-  height    Int      
-  weight    Int      
-  team      Team     @relation(fields: [teamId], references: [id])
-  teamId    Int      
-}
-
-model Team {
-  id        Int      @default(autoincrement()) @id
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  name      String   
-  city      String   
-  division  String   
-  coach     String   
-  players   Player[] 
 }
