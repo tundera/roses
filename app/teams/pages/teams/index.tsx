@@ -15,7 +15,7 @@ export const TeamsList = () => {
           <ul>
             {team.players.map((player) => (
               <li key={player.id}>
-                {player.text} - {player.votes} votes
+                {player.name} - {player.votes} votes
               </li>
             ))}
           </ul>

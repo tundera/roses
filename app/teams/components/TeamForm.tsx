@@ -1,8 +1,9 @@
-import React from "react"
-import db from "db"
+import React, { useEffect, useState } from "react"
 
 import { Flex, Box } from "theme-ui"
 import Select, { Option } from "rc-select"
+
+import getTeams from "app/teams/queries/getTeams"
 
 type TeamFormProps = {
   initialValues: any
@@ -10,6 +11,27 @@ type TeamFormProps = {
 }
 
 const TeamForm = ({ initialValues, onSubmit }: TeamFormProps) => {
+  const [teamOptions, setTeamOptions] = useState([])
+  const [teamCount, setTeamCount] = useState(0)
+
+  useEffect(() => {
+    const getTeamOptions = async () => {
+      const teams = await getTeams({ where: { id: { not: undefined } } })
+      const options = teams.map((team) => {
+        const { name, id } = team
+        return {
+          value: id,
+          label: name,
+        }
+      })
+
+      getTeamOptions()
+
+      setTeamOptions(options)
+      setTeamCount(teams.length)
+    }
+  }, [])
+
   return (
     <form
       onSubmit={(event) => {
@@ -18,9 +40,16 @@ const TeamForm = ({ initialValues, onSubmit }: TeamFormProps) => {
       }}
     >
       <h1>Update Team</h1>
+      <h2>Team Count: {teamCount ?? "Unavailable"}</h2>
       <Flex>
         <Box>
           <Select>
+            {teamOptions
+              ? teamOptions.map((teamOption) => {
+                  const { value, label } = teamOption
+                  return <Option value={value}>{label}</Option>
+                })
+              : null}
             <Option value="jack">jack</Option>
             <Option value="lucy">lucy</Option>
             <Option value="yiminghe">yiminghe</Option>
