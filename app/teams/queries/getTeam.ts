@@ -10,7 +10,6 @@ export default async function getTeam(
   { where /* include */ }: GetTeamInput,
   ctx: Record<any, any> = {}
 ) {
-  const team = await db.team.findOne({ where })
-
-  return team
+  const question = await db.team.findOne({ where, include: { players: true } })
+  return question
 }

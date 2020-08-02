@@ -7,7 +7,7 @@ type GetTeamsInput = {
   take?: FindManyTeamArgs["take"]
   skip?: FindManyTeamArgs["skip"]
   // Only available if a model relationship exists
-  // include?: FindManyTeamArgs['include']
+  include?: FindManyTeamArgs["include"]
 }
 
 export default async function getTeams(
@@ -20,7 +20,7 @@ export default async function getTeams(
     cursor,
     take,
     skip,
+    include: { players: true },
   })
-
   return teams
 }

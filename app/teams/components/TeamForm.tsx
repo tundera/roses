@@ -1,7 +1,8 @@
 import React from "react"
+import db from "db"
 
 import { Flex, Box } from "theme-ui"
-// import Select, { Option } from "rc-select"
+import Select, { Option } from "rc-select"
 
 type TeamFormProps = {
   initialValues: any
@@ -17,7 +18,7 @@ const TeamForm = ({ initialValues, onSubmit }: TeamFormProps) => {
       }}
     >
       <h1>Update Team</h1>
-      {/* <Flex>
+      <Flex>
         <Box>
           <Select>
             <Option value="jack">jack</Option>
@@ -25,7 +26,7 @@ const TeamForm = ({ initialValues, onSubmit }: TeamFormProps) => {
             <Option value="yiminghe">yiminghe</Option>
           </Select>
         </Box>
-      </Flex> */}
+      </Flex>
       <input placeholder="Team ID" />
       <input placeholder="Team Name" />
       <input placeholder="City" />

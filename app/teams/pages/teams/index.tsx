@@ -12,6 +12,13 @@ export const TeamsList = () => {
           <Link href="/teams/[teamId]" as={`/teams/${team.id}`}>
             <a>{team.name}</a>
           </Link>
+          <ul>
+            {team.players.map((player) => (
+              <li key={player.id}>
+                {player.text} - {player.votes} votes
+              </li>
+            ))}
+          </ul>
         </li>
       ))}
     </ul>
